@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letreiros e Fachadas de Alto Padrão no RJ | Creative Printi</title>
+<meta name="description" content="Especialistas em letreiros luxuosos, painéis luminosos, e fachadas em ACM no Rio de Janeiro. Transmita o melhor da sua marca. Orçamento grátis pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #2563EB;
+  --primary-dark: #E05200;
+  --preto: #050505;
+  --cinza-escuro: #121212;
+  --cinza-mid: #1E1E1E;
+  --cinza-bg: #F8F9FA;
+  --cinza-texto: #4A4A4A;
+  --branco: #ffffff;
+  --radius: 16px;
+  --radius-sm: 8px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; color: var(--preto); background: var(--branco); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5, h6, .nav-cta, .btn-wa, .btn-white, .section-label, .proof-text strong, .hero-eyebrow, .ep-tag, .aplic-num { font-family: 'Outfit', sans-serif !important; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0 60px; height: 90px;
+  background: rgba(15,15,15,0.96); backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(37,99,235,0.18);
+}
+.logo img { height: 60px; }
+.nav-cta {
+  background: var(--primary); color: var(--branco);
+  font-weight: 700; font-size: 14px; letter-spacing: .5px; text-transform: uppercase;
+  padding: 12px 28px; border-radius: 50px; text-decoration: none;
+  transition: all .3s ease;
+  box-shadow: 0 4px 15px rgba(37,99,235,0.3);
+}
+.nav-cta:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,99,235,0.4); }
+
+/* HERO — layout diferente: texto centralizado com faixa diagonal */
+.hero {
+  min-height: 100vh; background: var(--preto);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 72px 60px 0; position: relative; overflow: hidden;
+}
+/* faixa diagonal laranja no fundo */
+.hero::after {
+  content: '';
+  position: absolute; bottom: -100px; right: -100px;
+  width: 600px; height: 600px;
+  background: conic-gradient(from 200deg, rgba(37,99,235,.18), transparent 60%);
+  pointer-events: none; border-radius: 50%;
+}
+/* grade de pontos */
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(37,99,235,.18) 1px, transparent 1px);
+  background-size: 32px 32px; pointer-events: none; opacity: .5;
+}
+
+.hero-inner {
+  max-width: 1180px; margin: 0 auto; width: 100%;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center; gap: 60px;
+  padding-bottom: 80px; padding-top: 60px;
+  position: relative; z-index: 2;
+}
+
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(37,99,235,.12); border: 1px solid rgba(37,99,235,.3);
+  color: var(--primary); font-family: 'Montserrat', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
+  padding: 7px 14px; border-radius: 2px; margin-bottom: 28px;
+  animation: fadeUp .5s ease both;
+}
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(34px, 4vw, 60px); font-weight: 900; line-height: 1.05;
+  color: var(--branco); margin-bottom: 22px;
+  animation: fadeUp .5s ease .1s both;
+}
+.hero h1 em { font-style: normal; color: var(--primary); }
+.hero-sub {
+  font-size: 16.5px; color: rgba(255,255,255,.58); line-height: 1.75;
+  margin-bottom: 40px; max-width: 480px;
+  animation: fadeUp .5s ease .2s both;
+}
+.hero-sub strong { color: rgba(255,255,255,.9); font-weight: 600; }
+.hero-cta-wrap {
+  display: flex; flex-direction: column; gap: 14px;
+  animation: fadeUp .5s ease .3s both;
+}
+.btn-wa {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  background: linear-gradient(135deg, var(--primary), #3B82F6); color: var(--branco);
+  font-weight: 800; font-size: 16px; text-transform: uppercase; letter-spacing: 1px;
+  padding: 20px 40px; border-radius: 50px; text-decoration: none;
+  transition: all .3s cubic-bezier(0.25, 0.8, 0.25, 1); width: fit-content;
+  box-shadow: 0 8px 25px rgba(37,99,235,.35), inset 0 2px 0 rgba(255,255,255,.2);
+}
+.btn-wa:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(37,99,235,.45), inset 0 2px 0 rgba(255,255,255,.2); }
+.btn-wa svg { width: 24px; height: 24px; fill: currentColor; flex-shrink: 0; }
+.hero-note { font-size: 13px; color: rgba(255,255,255,.5); padding-left: 10px; font-weight: 500; }
+
+/* hero stats */
+.hero-stats {
+  display: flex; gap: 0;
+  border-top: 1px solid rgba(255,255,255,.08); margin-top: 44px; padding-top: 30px;
+  animation: fadeUp .5s ease .4s both;
+}
+.hero-stat { flex: 1; padding-right: 20px; }
+.hero-stat + .hero-stat { padding-left: 20px; border-left: 1px solid rgba(255,255,255,.08); }
+.hero-stat strong {
+  display: block; font-family: 'Montserrat', sans-serif;
+  font-size: 24px; font-weight: 900; color: var(--primary); line-height: 1; margin-bottom: 4px;
+}
+.hero-stat span { font-size: 11px; color: rgba(255,255,255,.35); text-transform: uppercase; letter-spacing: .5px; }
+
+/* HERO RIGHT — diagrama "antes e depois" estilizado */
+.hero-right { animation: fadeUp .6s ease .35s both; position: relative; }
+.envelope-preview {
+  background: rgba(26,26,26,0.6); backdrop-filter: blur(10px);
+  border: 1px solid rgba(37,99,235,.2); border-radius: var(--radius); overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+.ep-header {
+  background: rgba(37,99,235,.1); border-bottom: 1px solid rgba(37,99,235,.15);
+  padding: 14px 20px; display: flex; align-items: center; gap: 8px;
+}
+.ep-dot { width: 10px; height: 10px; border-radius: 50%; }
+.ep-header span {
+  font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700;
+  color: rgba(255,255,255,.5); letter-spacing: 1px; text-transform: uppercase; margin-left: 4px;
+}
+.ep-body { padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+
+.ep-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 16px;
+  background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.05);
+  border-radius: var(--radius-sm); transition: all .3s ease;
+}
+.ep-item:hover { border-color: rgba(37,99,235,.4); background: rgba(255,255,255,.06); transform: translateX(5px); }
+.ep-thumb {
+  width: 48px; height: 48px; border-radius: 3px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 22px;
+}
+.ep-thumb.veicular { background: linear-gradient(135deg, #1a3a1a, #0d1f0d); }
+.ep-thumb.vitrine  { background: linear-gradient(135deg, #1a1a3a, #0d0d1f); }
+.ep-thumb.piso     { background: linear-gradient(135deg, #2a1a0a, #1a0f05); }
+.ep-thumb.recorte  { background: linear-gradient(135deg, #1a0a0a, #300505); }
+.ep-thumb.etiqueta { background: linear-gradient(135deg, #0a1a2a, #051020); }
+
+.ep-item-info { flex: 1; }
+.ep-item-info h4 {
+  font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700;
+  color: var(--branco); margin-bottom: 3px;
+}
+.ep-item-info p { font-size: 11px; color: rgba(255,255,255,.38); line-height: 1.4; }
+.ep-tag {
+  background: rgba(37,99,235,.15); color: var(--primary);
+  font-size: 10px; font-weight: 800;
+  padding: 4px 10px; border-radius: 50px; letter-spacing: 1px; flex-shrink: 0; text-transform: uppercase;
+}
+
+/* PROOF BAR */
+.proof-bar {
+  background: var(--primary); padding: 20px 60px;
+  display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
+}
+.proof-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 6px 40px; border-right: 1px solid rgba(255,255,255,.25);
+}
+.proof-item:last-child { border-right: none; }
+.proof-icon { font-size: 22px; }
+.proof-text strong {
+  display: block; font-family: 'Montserrat', sans-serif;
+  font-size: 16px; font-weight: 900; color: var(--branco); line-height: 1;
+}
+.proof-text span {
+  font-size: 11px; font-weight: 600; color: rgba(255,255,255,.8);
+  text-transform: uppercase; letter-spacing: .4px;
+}
+
+/* BENEFÍCIOS */
+.beneficios { background: var(--cinza-bg); padding: 96px 60px; }
+.bene-inner { max-width: 1180px; margin: 0 auto; }
+.section-label {
+  font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--primary);
+  display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
+}
+.section-label::before { content: ''; display: block; width: 28px; height: 2px; background: var(--primary); }
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(26px, 3.2vw, 44px); font-weight: 900; line-height: 1.1;
+  color: var(--preto); margin-bottom: 56px;
+}
+.section-title span { color: var(--primary); }
+.bene-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.bene-card {
+  background: var(--branco); border-radius: var(--radius); padding: 40px 32px;
+  border: 1px solid rgba(0,0,0,0.05); border-bottom: 4px solid transparent;
+  transition: all .3s cubic-bezier(0.25, 0.8, 0.25, 1); position: relative; overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+.bene-card:hover { border-bottom-color: var(--primary); transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,.08); }
+.bene-card-num {
+  position: absolute; top: 16px; right: 20px;
+  font-family: 'Montserrat', sans-serif; font-size: 48px; font-weight: 900;
+  color: rgba(37,99,235,.06); line-height: 1;
+}
+.bene-icon {
+  width: 50px; height: 50px; background: rgba(37,99,235,.08); border-radius: 4px;
+  display: flex; align-items: center; justify-content: center; font-size: 22px;
+  margin-bottom: 18px; transition: background .2s;
+}
+.bene-card:hover .bene-icon { background: rgba(37,99,235,.15); }
+.bene-card h3 {
+  font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 800;
+  color: var(--preto); margin-bottom: 10px;
+}
+.bene-card p { font-size: 13.5px; color: var(--cinza-texto); line-height: 1.65; }
+
+/* APLICAÇÕES */
+.aplicacoes { background: var(--preto); padding: 96px 60px; }
+.aplic-inner { max-width: 1180px; margin: 0 auto; }
+.aplic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; margin-top: 56px; }
+.aplic-card {
+  position: relative; overflow: hidden; min-height: 280px;
+  background: var(--cinza-escuro); cursor: default; border-radius: var(--radius-sm); transition: all .4s ease;
+}
+.aplic-card:hover { z-index: 2; transform: scale(1.02); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+.aplic-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .5s;
+}
+.aplic-card:hover .aplic-bg { transform: scale(1.06); }
+.aplic-bg-veicular { background: linear-gradient(135deg, #0a1a0a 0%, #1a3010 50%, #0f2008 100%); }
+.aplic-bg-vitrine   { background: linear-gradient(135deg, #0a0a1a 0%, #10102a 50%, #080820 100%); }
+.aplic-bg-piso      { background: linear-gradient(135deg, #1a0f00 0%, #2d1a05 50%, #180c00 100%); }
+.aplic-bg-frota     { background: linear-gradient(135deg, #1a0505 0%, #2d0a08 50%, #180303 100%); }
+.aplic-bg-parede    { background: linear-gradient(135deg, #0a1a1a 0%, #102a28 50%, #082020 100%); }
+.aplic-bg-etiqueta  { background: linear-gradient(135deg, #1a1a0a 0%, #2d2810 50%, #181408 100%); }
+
+.aplic-icon {
+  position: absolute; top: 28px; left: 28px; font-size: 36px; opacity: .35;
+}
+.aplic-content {
+  position: absolute; bottom: 0; left: 0; right: 0; padding: 24px;
+  background: linear-gradient(to top, rgba(0,0,0,.85) 0%, transparent 100%);
+}
+.aplic-content h3 {
+  font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 800;
+  color: var(--branco); margin-bottom: 6px;
+}
+.aplic-content p { font-size: 12.5px; color: rgba(255,255,255,.55); line-height: 1.5; }
+.aplic-num {
+  position: absolute; top: 20px; right: 20px;
+  font-family: 'Montserrat', sans-serif; font-size: 44px; font-weight: 900;
+  color: rgba(37,99,235,.12); line-height: 1;
+}
+
+/* GALERIA */
+.galeria { background: var(--cinza-bg); padding: 96px 60px; }
+.galeria-inner { max-width: 1180px; margin: 0 auto; }
+.galeria-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 260px;
+  gap: 16px; margin-top: 56px;
+}
+.galeria-item { position: relative; overflow: hidden; border-radius: var(--radius); background: var(--cinza-escuro); }
+.galeria-item.destaque { grid-column: span 2; grid-row: span 2; }
+.galeria-item.tall { grid-row: span 2; }
+.galeria-item.wide { grid-column: span 2; }
+.galeria-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s cubic-bezier(0.25, 0.8, 0.25, 1); }
+.galeria-item:hover img { transform: scale(1.08); }
+.galeria-cap {
+  position: absolute; bottom: 0; left: 0; right: 0; padding: 24px 20px 20px;
+  background: linear-gradient(to top, rgba(0,0,0,.9) 0%, transparent 100%);
+}
+.galeria-cap span {
+  font-size: 12px; font-weight: 800;
+  color: var(--branco); text-transform: uppercase; letter-spacing: 1px;
+}
+.gp-1 { background: linear-gradient(135deg, #0a1a05, #1a3010); }
+.gp-2 { background: linear-gradient(135deg, #1a0808, #2d1010); }
+.gp-3 { background: linear-gradient(135deg, #0a0a1f, #12122d); }
+.gp-4 { background: linear-gradient(135deg, #1a1000, #2d1c05); }
+.gp-5 { background: linear-gradient(135deg, #081a18, #0d2a28); }
+.gp-6 { background: linear-gradient(135deg, #1a1205, #2d2010); }
+.gp-label {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 800;
+  color: rgba(37,99,235,.35); text-transform: uppercase; letter-spacing: 2px; text-align: center;
+}
+
+/* CTA */
+.cta-section {
+  background: var(--primary); padding: 96px 60px; text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-section::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 48px 48px; pointer-events: none;
+}
+.cta-inner { position: relative; z-index: 2; max-width: 680px; margin: 0 auto; }
+.cta-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(28px, 3.8vw, 52px); font-weight: 900;
+  color: var(--branco); line-height: 1.1; margin-bottom: 18px;
+}
+.cta-section p { font-size: 17px; color: rgba(255,255,255,.88); line-height: 1.7; margin-bottom: 40px; }
+.btn-white {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  background: var(--branco); color: var(--primary);
+  font-weight: 800; font-size: 16px; text-transform: uppercase; letter-spacing: 1px;
+  padding: 20px 48px; border-radius: 50px; text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,.15); transition: all .3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.btn-white:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(0,0,0,.25); }
+.btn-white svg { width: 22px; height: 22px; fill: currentColor; }
+.cta-note { margin-top: 16px; font-size: 13px; color: rgba(255,255,255,.7); font-weight: 500; }
+
+/* FAQ */
+.faq { background: var(--preto); padding: 96px 60px; }
+.faq-inner { max-width: 780px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid rgba(255,255,255,.08); }
+.faq-btn {
+  width: 100%; background: none; border: none; padding: 22px 0; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center; gap: 20px;
+  text-align: left; color: var(--branco);
+  font-family: 'Montserrat', sans-serif; font-size: 14.5px; font-weight: 700;
+  transition: color .2s;
+}
+.faq-btn:hover { color: var(--primary); }
+.faq-icon {
+  width: 26px; height: 26px; border-radius: 50%;
+  background: rgba(37,99,235,.12); display: flex; align-items: center; justify-content: center;
+  color: var(--primary); font-size: 18px; flex-shrink: 0;
+  transition: transform .3s, background .2s;
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); background: var(--primary); color: var(--branco); }
+.faq-answer {
+  max-height: 0; overflow: hidden;
+  transition: max-height .35s ease, padding .35s ease;
+  font-size: 14px; color: rgba(255,255,255,.48); line-height: 1.75;
+}
+.faq-item.open .faq-answer { max-height: 200px; padding-bottom: 22px; }
+
+/* FOOTER */
+footer {
+  background: #080808; padding: 48px 60px 32px;
+  border-top: 1px solid rgba(37,99,235,.12);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 20px;
+}
+footer img { height: 55px; }
+.footer-links { display: flex; gap: 28px; }
+.footer-links a { font-size: 13px; color: rgba(255,255,255,.3); text-decoration: none; transition: color .2s; }
+.footer-links a:hover { color: var(--primary); }
+.footer-copy { font-size: 12px; color: rgba(255,255,255,.2); }
+
+/* WA FLOAT */
+.wa-float {
+  position: fixed; bottom: 26px; right: 26px; z-index: 300;
+  width: 58px; height: 58px; background: #25D366; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,.45); text-decoration: none;
+  transition: transform .2s; animation: waPulse 2.5s ease-in-out infinite;
+}
+.wa-float:hover { transform: scale(1.1); }
+.wa-float svg { width: 27px; height: 27px; fill: #fff; }
+
+@keyframes waPulse {
+  0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,.45); }
+  50% { box-shadow: 0 4px 28px rgba(37,211,102,.7), 0 0 0 7px rgba(37,211,102,.1); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width:960px){
+  nav { padding: 0 24px; }
+  .hero { padding: 72px 24px 0; }
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .envelope-preview { display: none; }
+  .proof-bar { padding: 18px 24px; }
+  .proof-item { padding: 6px 20px; }
+  .beneficios,.aplicacoes,.galeria,.cta-section,.faq { padding: 70px 24px; }
+  .bene-grid { grid-template-columns: 1fr 1fr; }
+  .aplic-grid { grid-template-columns: 1fr 1fr; }
+  .galeria-grid { grid-template-columns: 1fr; grid-auto-rows: 250px; }
+  .galeria-item.destaque { grid-column: span 1; grid-row: span 1; }
+  footer { padding: 40px 24px 28px; flex-direction: column; align-items: flex-start; }
+}
+@media(max-width:600px){
+  .bene-grid,.aplic-grid { grid-template-columns: 1fr; }
+  .galeria-grid { grid-template-columns: 1fr; grid-auto-rows: 280px; }
+  .galeria-item.destaque { grid-column: span 1; grid-row: span 1; }
+  .proof-bar { flex-direction: column; align-items: flex-start; }
+  .proof-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.2); width: 100%; padding: 10px 0; }
+  .proof-item:last-child { border-bottom: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo"><img src="./Marca%20d'agua%20insta%20-%20branco.png" alt="Creative Printi"></div>
+  <a href="https://wa.me/5521966021918?text=Olá,%20vim%20pelo%20site%20e%20quero%20orçamento%20de%20Letreiros%20e%20Fachadas!" class="nav-cta" target="_blank" rel="noopener">💬 Orçamento Grátis</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">🏬 Letreiros Premium & Fachadas · RJ</div>
+      <h1>Destaque sua<br>Marca de Longe<br>e de <em>Perto</em></h1>
+      <p class="hero-sub">
+        Construímos fachadas imponentes, letras caixa com acabamento premium e painéis luminosos sofisticados. Dê identidade e vida ao seu negócio com <strong>materiais nobres e resistentes ao clima do RJ</strong>.
+      </p>
+      <div class="hero-cta-wrap">
+        <a href="https://wa.me/5521966021918?text=Olá,%20vim%20pelo%20site%20e%20quero%20orçamento%20de%20Letreiros%20e%20Fachadas!" class="btn-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Solicitar Orçamento Agora
+        </a>
+        <span class="hero-note">⚡ Resposta em até 1 hora · (21) 96602-1918</span>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>100%</strong><span>Acrílico & Inox</span></div>
+        <div class="hero-stat"><strong>Seguro</strong><span>Instalação Profissional</span></div>
+        <div class="hero-stat"><strong>+100</strong><span>Fachadas no RJ</span></div>
+      </div>
+    </div>
+
+    <!-- Card de serviços estilizado -->
+    <div class="hero-right">
+      <div class="envelope-preview">
+        <div class="ep-header">
+          <div class="ep-dot" style="background:#2563EB"></div>
+          <div class="ep-dot" style="background:rgba(37,99,235,.4)"></div>
+          <div class="ep-dot" style="background:rgba(37,99,235,.2)"></div>
+          <span>Tipos de Letreiro</span>
+        </div>
+        <img src="img_Letreiro/WhatsApp Image 2026-01-12 at 18.26.53.jpeg" style="width:100%;height:320px;object-fit:cover;display:block" alt="Sinalização Vertical">
+        <div class="ep-body">
+          <div class="ep-item">
+            <div class="ep-thumb veicular">🏢</div>
+            <div class="ep-item-info">
+              <h4>Revestimento em ACM</h4>
+              <p>Acabamento impecável e estrutura blindada em chapas.</p>
+            </div>
+            <span class="ep-tag">Popular</span>
+          </div>
+          <div class="ep-item">
+            <div class="ep-thumb vitrine">✨</div>
+            <div class="ep-item-info">
+              <h4>Letras Caixa (Blockletter)</h4>
+              <p>Relevo profundo em aço, galvanizado ou acrílico.</p>
+            </div>
+          </div>
+          <div class="ep-item">
+            <div class="ep-thumb piso">💡</div>
+            <div class="ep-item-info">
+              <h4>Letreiros Luminosos</h4>
+              <p>LED de alta intensidade para destacar à noite.</p>
+            </div>
+          </div>
+          <div class="ep-item">
+            <div class="ep-thumb recorte">📜</div>
+            <div class="ep-item-info">
+              <h4>Placas Institucionais</h4>
+              <p>Identificação de recepção e diretórios corporativos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <div class="proof-item"><div class="proof-icon">🏢</div><div class="proof-text"><strong>Durabilidade Máxima</strong><span>Materiais que não enferrujam</span></div></div>
+  <div class="proof-item"><div class="proof-icon">💡</div><div class="proof-text"><strong>Iluminação Full LED</strong><span>Visibilidade mesmo de longe</span></div></div>
+  <div class="proof-item"><div class="proof-icon">🛠️</div><div class="proof-text"><strong>Instalação Segura</strong><span>Equipe e Andaimes rígidos</span></div></div>
+  <div class="proof-item"><div class="proof-text"><strong>RJ & Grande Rio</strong><span>Projetos em todo estado</span></div></div>
+</div>
+
+<!-- BENEFÍCIOS -->
+<section class="beneficios">
+  <div class="bene-inner">
+    <div class="section-label">Por que a Creative Printi</div>
+    <h2 class="section-title">Sua Fachada Construída para<br><span>Impactar e Durar</span></h2>
+    <div class="bene-grid">
+      <div class="bene-card">
+        <div class="bene-card-num">01</div>
+        <div class="bene-icon">🥇</div>
+        <h3>Letras em Acrílico e Inox</h3>
+        <p>Utilizamos apenas matérias-primas nobres, resistentes ao tempo, que mantêm o acabamento perfeitamente liso por décadas, livre de descascamento ou desbotamento no RJ.</p>
+      </div>
+      <div class="bene-card">
+        <div class="bene-card-num">02</div>
+        <div class="bene-icon">🛡️</div>
+        <h3>Revestimento em ACM</h3>
+        <p>Estruturamos as frentes de loja com Painéis de Alumínio Composto (ACM), o padrão do luxo comercial: visual impecável, blindado contra choques e totalmente lavável.</p>
+      </div>
+      <div class="bene-card">
+        <div class="bene-card-num">03</div>
+        <div class="bene-icon">💡</div>
+        <h3>Luminosos de Alta Performance</h3>
+        <p>Retroiluminação suave ou iluminação direta em caixa através de módulos LED certificados, assegurando o máximo de claridade e baixo consumo de energia noite e dia.</p>
+      </div>
+      <div class="bene-card">
+        <div class="bene-card-num">04</div>
+        <div class="bene-icon">📐</div>
+        <h3>Fabricação de Blockletters</h3>
+        <p>Letras monumentais, perfeitas para a visão 3D angular na rua, estruturadas e usinadas de forma customizada de acordo com as especificações rígidas da arquitetura.</p>
+      </div>
+      <div class="bene-card">
+        <div class="bene-card-num">05</div>
+        <div class="bene-icon">🏗️</div>
+        <h3>Instalação Segura</h3>
+        <p>Fixação mecânica com engenharia própria, seja pendurada, suspensa ou encostada. Nossa prioridade além da estética é impedir qualquer queda da armação exterior.</p>
+      </div>
+      <div class="bene-card">
+        <div class="bene-card-num">06</div>
+        <div class="bene-icon">🎯</div>
+        <h3>Da Arte até o Parafuso</h3>
+        <p>Consultoria completa desde a montagem do grid visual do seu negócio, projeto de fachada e até uma rigorosa vistoria final do brilho que ele causa nas ruas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APLICAÇÕES -->
+<section class="aplicacoes">
+  <div class="aplic-inner">
+    <div class="section-label" style="color:var(--primary)">Tipos de Estruturas</div>
+    <h2 class="section-title" style="color:var(--branco)">O Estilo Certo para<br><span>Sua Arquitetura</span></h2>
+    <div class="aplic-grid">
+      <div class="aplic-card">
+        <img src="img_Letreiro/Placa de ACM com Blockletter (2).jpeg" class="aplic-bg" alt="Placa Blockletter">
+        <div class="aplic-icon">A</div>
+        <div class="aplic-num">01</div>
+        <div class="aplic-content">
+          <h3>Letra Caixa / Blockletter</h3>
+          <p>Letras encorpadas em alto relevo que agregam sofisticação imbatível na visão 3D.</p>
+        </div>
+      </div>
+      <div class="aplic-card">
+        <img src="img_Letreiro/WhatsApp Image 2023-01-29 at 09.53.38 (2).jpeg" class="aplic-bg" alt="Tapume de Loja Shopping">
+        <div class="aplic-icon">🚧</div>
+        <div class="aplic-num">02</div>
+        <div class="aplic-content">
+          <h3>Tapumes de Obras</h3>
+          <p>Fechamentos impressos e super visíveis para lojas em pré-inauguração.</p>
+        </div>
+      </div>
+      <div class="aplic-card">
+        <img src="img_Letreiro/WhatsApp Image 2023-01-29 at 10.08.04 (1).jpeg" class="aplic-bg" alt="Totem de Rua">
+        <div class="aplic-icon">🗼</div>
+        <div class="aplic-num">03</div>
+        <div class="aplic-content">
+          <h3>Totens e Monolitos</h3>
+          <p>Grandes sinalizações verticais instaladas diretamente sobre o solo em vias e fachadas.</p>
+        </div>
+      </div>
+      <div class="aplic-card">
+        <img src="img_Letreiro/WhatsApp Image 2025-12-24 at 11.40.31.jpeg" class="aplic-bg" alt="ACM">
+        <div class="aplic-icon">🏢</div>
+        <div class="aplic-num">04</div>
+        <div class="aplic-content">
+          <h3>Revestimento em ACM</h3>
+          <p>Frentes impecavelmente planas em cores premium, blindando lojas e comércio.</p>
+        </div>
+      </div>
+      <div class="aplic-card">
+        <img src="img_Letreiro/WhatsApp Image 2023-11-15 at 10.12.20.jpeg" class="aplic-bg" alt="Placas Institucionais">
+        <div class="aplic-icon">📜</div>
+        <div class="aplic-num">05</div>
+        <div class="aplic-content">
+          <h3>Placas Institucionais</h3>
+          <p>Identificação elegante e rigorosa para hospitais, condomínios e frontões.</p>
+        </div>
+      </div>
+      <div class="aplic-card">
+        <img src="img_Letreiro/WhatsApp Image 2023-01-29 at 10.30.11 (2).jpeg" class="aplic-bg" alt="Fachada Completa">
+        <div class="aplic-icon">🏪</div>
+        <div class="aplic-num">06</div>
+        <div class="aplic-content">
+          <h3>Fachada e Vitrine Unificadas</h3>
+          <p>Conjunto superior iluminado acompanhado de adesivação e recorte em blindex.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="galeria">
+  <div class="galeria-inner">
+    <div class="section-label">Nossos trabalhos</div>
+    <h2 class="section-title">Resultados que<br><span>Falam por Si</span></h2>
+    <div class="galeria-grid">
+      <div class="galeria-item destaque">
+        <img src="img_Letreiro/Loja-Flamengo-3-848x477.webp" alt="Fachada Loja do Flamengo">
+        <div class="galeria-cap"><span>Fachada Master — Loja do Flamengo</span></div>
+      </div>
+      <div class="galeria-item">
+        <img src="img_Letreiro/WhatsApp Image 2023-01-29 at 10.24.57.jpeg" alt="Letras em Acrílico">
+        <div class="galeria-cap"><span>Letras 3D para Clínicas</span></div>
+      </div>
+      <div class="galeria-item">
+        <img src="img_Letreiro/WhatsApp Image 2023-01-29 at 10.29.13 (1).jpeg" alt="Logo Recepção Interna">
+        <div class="galeria-cap"><span>Logo Interno de Recepção Corporativa</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2>Vamos Elevar o Nível da<br>Sua Fachada Comercial?</h2>
+    <p>Fale agora pelo WhatsApp. Diga o que precisa, envie uma foto da sua frente de loja e receba um orçamento com a nossa recomendação tecnológica.</p>
+    <a href="https://wa.me/5521966021918?text=Olá,%20vim%20pelo%20site%20e%20quero%20orçamento%20de%20Letreiros%20e%20Fachadas!" class="btn-white" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Falar com Especialista Agora
+    </a>
+    <p class="cta-note">⚡ Resposta em até 1 hora · (21) 96602-1918</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="section-label" style="color:var(--primary)">Dúvidas Frequentes</div>
+    <h2 class="section-title" style="color:var(--branco)">Perguntas sobre <span>Fachadas Premium</span></h2>
+    <div style="margin-top:40px">
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">Quanto tempo demora a instalação de uma Fachada em ACM?<div class="faq-icon">+</div></button>
+        <div class="faq-answer">O prazo de instalação varia de 1 a 3 dias dependendo do tamanho da estrutura e acesso ao local. A produção geralmente leva de 10 a 15 dias após aprovação do projeto.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">Os letreiros luminosos gastam muita energia?<div class="faq-icon">+</div></button>
+        <div class="faq-answer">Não. Utilizamos exclusivamente lâmpadas e fitas de LED de alta eficiência, que oferecem iluminação intensa e constante gastando muito menos energia térmica e elétrica que os bulbos comums.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">A placa requer alguma manutenção contra ferrugem?<div class="faq-icon">+</div></button>
+        <div class="faq-answer">Utilizamos ACM, Acrílico, PVC Expandido e Inox (com tratamento específico anti-oxidação ou galvanizado pintado eletrostaticamente). Portanto eles NÃO enferrujam, mantendo-se lindos a longo prazo.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">O Orçamento inclui visita técnica?<div class="faq-icon">+</div></button>
+        <div class="faq-answer">Sim! Nós conversamos sobre as dimensões gerais no WhatsApp e, após avaliação pré-aprovada, enviamos uma equipe para colher as medidas exatas da sua parede/fachada na engenharia antes de entrar em produção.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="./Marca%20d'agua%20insta%20-%20branco.png" alt="Creative Printi">
+  <div class="footer-links">
+    <a href="https://wa.me/5521966021918" target="_blank">(21) 96602-1918</a>
+    <a href="mailto:comercial@creativeprinti.com.br">comercial@creativeprinti.com.br</a>
+    <a href="https://www.instagram.com/creativeprintisign/" target="_blank">Instagram</a>
+  </div>
+  <p class="footer-copy">© 2025 Creative Printi · Higienópolis, Rio de Janeiro</p>
+</footer>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/5521966021918?text=Olá,%20vim%20pelo%20site%20e%20quero%20orçamento%20de%20Letreiros%20e%20Fachadas!" class="wa-float" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+function toggleFaq(btn){
+  const item=btn.parentElement,isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';io.unobserve(e.target);}
+  });
+},{threshold:.08});
+document.querySelectorAll('.bene-card,.aplic-card,.galeria-item').forEach((el,i)=>{
+  el.style.opacity='0';el.style.transform='translateY(20px)';
+  el.style.transition=`opacity .4s ease ${(i%4)*.08}s,transform .4s ease ${(i%4)*.08}s`;
+  io.observe(el);
+});
+</script>
+</body>
+</html>
